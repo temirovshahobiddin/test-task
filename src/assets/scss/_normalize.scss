@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+.container {
+    max-width: 1540px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 1700px) {
+        padding: 0 10px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    
+    overflow-x: hidden;
+    position: relative;
+
+}
+
+a,
+p,
+h3,
+h1,
+h2 {
+    @media (max-width: 600px) {
+        letter-spacing: -0.5px !important;
+    }
+
+}
+
+.swal2-styled {
+    box-shadow: none !important;
+}
+
+/* .home {
+    overflow-x: hidden;
+} */

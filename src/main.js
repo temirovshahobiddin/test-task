@@ -3,6 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
+import "./interceptors/axios";
+import '@/assets/fonts/Roboto/roboto.css'
+import '@/assets/scss/main.scss'
+
 
 Vue.config.productionTip = false
 

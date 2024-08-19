@@ -1,0 +1,98 @@
+:root {
+    // colors
+    --light: #f1f1f1;
+    --light-blue: #f5f7fb;
+    --light-grey: #f5f6fa;
+    --light-red: #FFF5F5;
+    
+    --grey: #B9B9B9;
+    --blue: #406aff;
+    --red: #FF5151;
+    --orange: #ffb451;
+    --white: #fff;
+    --green: #1AC13F;
+    --yellow: #c6d400;
+    
+    --dark: #3e3e3e;
+    --dark-blue: #081837;
+    
+    
+    
+    //fonts
+    --font-roboto: 'Roboto';
+    
+    //border
+    --radius-10: 10px;
+    --radius-5: 5px;
+  }
+  
+  a {
+      text-decoration: none;
+      transition: all 0.2s ease;
+  }
+  
+  .v-btn {
+      font-family: var(--font-roboto);
+  }
+  
+  .app {
+  //   font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: var(--font-roboto);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--dark);
+  }
+  html {
+    overflow: hidden;
+  }
+  
+  .c-field .v-input__slot {
+    background-color: var(--light-grey) !important;
+    border-radius: var(--radius-5);
+    font-family: sans-serif;
+  
+    & fieldset {
+      border-color: var(--light-grey) !important;
+      color: var(--light-grey);
+  
+      &:focus {
+        border-color: var(--blue) !important;
+      }
+    }
+  }
+  
+  .c-field.v-input--is-focused label {
+    color: var(--blue) !important;
+  }
+  
+  .v-text-field--outlined.v-input--is-focused fieldset {
+    border-color: var(--blue) !important;
+  }
+  
+  .c-btn {
+    display: flex;
+    letter-spacing: normal;
+    height: auto!important;
+    padding: 22px 80px!important;
+    border-radius: var(--radius-10);
+  }
+  
+  .c-border {
+    border: 2px solid var(--light-grey);
+    border-radius: var(--radius-10);
+  }
+  
+  .mono {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+  
+  .table {
+    font-family: sans-serif;
+  }
+  
+  .table__header {
+    display: flex;
+    margin: 0 12px 12px;
+    gap: 10px;
+  }
