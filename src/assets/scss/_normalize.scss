@@ -27,7 +27,7 @@ ul {
 }
 
 body {
-    
+    background: #EEEEEE;
     overflow-x: hidden;
     position: relative;
 
@@ -42,6 +42,10 @@ h2 {
         letter-spacing: -0.5px !important;
     }
 
+}
+
+#app{
+    background: #EEEEEE;
 }
 
 .swal2-styled {

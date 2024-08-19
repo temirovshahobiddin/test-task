@@ -64,13 +64,21 @@ const actions = {
     });
   },
   
-  checkAuth({ commit }) {
+  async checkAuth({ commit }) {
     const token = localStorage.getItem('token');
     if (token) {
-      commit('AUTH_SUCCESS', { token, user: null });
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+      commit('AUTH_REQUEST');
+      try {
+        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;    
+        const response = await axios.get('https://dev.moydomonline.ru/api/auth/user/');
+        const user = response.data;
+        commit('AUTH_SUCCESS', { token, user });
+      } catch (error) {
+        commit('AUTH_ERROR', 'Не удалось восстановить сессию');
+        localStorage.removeItem('token');
+      }
     }
-  },
+  }
 };
 
 
@@ -83,8 +91,9 @@ const getters = {
 
 
 export default {
+  namespaced: true,
   state,
-  mutations,
-  actions,
   getters,
+  actions,
+  mutations
 };

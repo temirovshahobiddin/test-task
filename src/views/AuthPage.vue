@@ -23,14 +23,14 @@ export default {
     baseImage: require('@/assets/images/bg.jpeg')
   }),
   computed: {
-    ...mapGetters(['authError'])
+    ...mapGetters('auth', ['authError'])
   },
   methods: {
-    ...mapActions(['login']),
+    ...mapActions('auth', ['login']),
     async handleLogin(credentials) {
       try {
-        await this.login(credentials); 
-        this.$router.push('/');
+        await this.login(credentials);
+        this.$router.push({ name: "home" })
       } catch (error) {
         console.error('Login failed:', error);
       }
